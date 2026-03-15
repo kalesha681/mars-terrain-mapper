@@ -1,0 +1,13 @@
+# Model weights
+*.pt
+*.pth
+
+# Dataset (too large for GitHub)
+data/raw/mars-dataset/
+
+# Training runs output
+runs/
+
+# Python cache
+__pycache__/
+*.pyc
