@@ -29,7 +29,7 @@ Stable 3D feature coordinates
 ## Results
 | Component | Metric | Value |
 |---|---|---|
-| YOLOv8n Detection | mAP50 | TBD (training) |
+| YOLOv8n Detection | mAP50 | 0.593 (30 epochs, CPU) |
 | EKF Position Estimation | RMSE | 0.156 m |
 | EKF vs Dead Reckoning | Improvement | 95.2% |
 | Inference Speed | CPU | ~52ms/frame |
