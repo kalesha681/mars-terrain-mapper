@@ -1,0 +1,35 @@
+# Mars Terrain Mapper — Central Configuration
+
+model:
+  weights: "yolov8n.pt"
+  trained_weights: "runs/detect/results/mars_detector/weights/best.pt"
+  confidence_threshold: 0.3
+  iou_threshold: 0.7
+  image_size: 640
+
+training:
+  epochs: 30
+  batch_size: 8
+  device: "cpu"
+  dataset: "data/raw/mars-dataset/data.yaml"
+  project: "runs/detect/results"
+  name: "mars_detector"
+  patience: 10
+
+ekf:
+  dt: 0.01
+  imu_noise: 0.5
+  flow_noise: 0.3
+  process_noise_pos: 1.0e-5
+  process_noise_vel: 1.0e-3
+
+mapper:
+  arena_size: 5.0
+  cell_size: 0.1
+  min_confidence: 0.3
+
+hardware:
+  drone: "Pixhawk 6x + Jetson Nano"
+  camera: "Intel RealSense D series"
+  base_station: "Jetson Orin NX"
+  comms: "UDP + GStreamer"
